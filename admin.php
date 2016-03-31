@@ -17,19 +17,19 @@ include('inc/header.php');
                 </a>
             </li>
             <li>
-                <a href="#">Dashboard</a>
+                <a href="<?php echo "admin.php#!/dash"?>">Dashboard</a>
             </li>
             <li>
-                <a href="#">Add Appointment</a>
+                <a href="<?php echo "admin.php#!/add"?>">Add Appointment</a>
             </li>
             <li>
-                <a href="#">Update/Cancel</a>
+                <a href="<?php echo "admin.php#!/update"?>">Update/Cancel</a>
             </li>
             <li>
                 <a href="<?php echo "admin.php#!/breeds"?>">Dog Breeds</a>
             </li>
             <li>
-                <a href=<?php echo "admin.php#!/list"?>>Customer List</a>
+                <a href="<?php echo "admin.php#!/list"?>">Customer List</a>
             </li>
             <li>
                 <a href="#">Services</a>
@@ -61,14 +61,19 @@ include('inc/header.php');
             $routeProvider
             // route to different templates
                 .when('/', {
-                    templateUrl: 'pages/all.php',
+                    templateUrl: 'pages/dash.php',
+                })
+                .when('/add', {
+                    templateUrl: 'pages/add.php',
+                })
+                .when('/update', {
+                    templateUrl: 'pages/update.php',
                 })
                 .when('/list', {
                     templateUrl: 'pages/list.php',
                 })
                 .when('/breeds', {
-                    templateUrl: 'pages/breeds.html',
-
+                    templateUrl: 'pages/breeds.php',
                 })
                 .otherwise('/');
         })

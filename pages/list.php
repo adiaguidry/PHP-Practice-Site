@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
         <div class="col-md-3">
             <h3><?php echo $row["email"] ?></h3>
         </div>
-
+        <hr style="border: 1px solid #333">
   <?php  }
 } else {
     echo "0 results";

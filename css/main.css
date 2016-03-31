@@ -335,6 +335,8 @@ th {
     clear: both;
 }
 
+
+
 /*.error {*/
 /*background: #FF9F9F url(error.png) no-repeat 5px 10px;*/
 /*}*/
@@ -467,6 +469,12 @@ th {
     background: none;
 }
 
+.form-control {
+    background-color: transparent;
+    color: #222;
+}
+
+/*media style*/
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
