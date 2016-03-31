@@ -473,6 +473,17 @@ th {
     background-color: transparent;
     color: #222;
 }
+input[type="text"]::-webkit-input-placeholder {
+    color: whitesmoke !important;
+}
+
+input[type="email"]:-moz-placeholder { /* Firefox 18- */
+    color: #fff !important;
+}
+
+select option {
+    color: #ffffff !important;
+}
 
 /*media style*/
 @media(min-width:768px) {

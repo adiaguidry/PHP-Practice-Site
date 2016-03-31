@@ -1,10 +1,27 @@
+
+<?php
+require_once('../../connect.php');
+
+if(isset($_POST['add'])){
+
+    $addQuery = "INSERT INTO grooming(firstName, lastName) VALUES ('$_POST[firstName]',
+    '$_POST[lastName]')";
+
+    if (mysqli_query($conn, $addQuery)){
+        echo "New grooming appointment set";
+    } else{
+        echo "Error: " . $addQuery . "<br>" . mysqli_error($conn);
+    };
+}
+
+mysqli_close($conn);
+
+?>
 <style>
     .form-control {
         background-color: transparent;
         color: #000;
     }
-
-
 </style>
 <div class="row">
     <div class="col-lg-12">
@@ -36,7 +53,7 @@
             <div class="col-md-12 form-group">
                 <label for="lastName" class=" control-label">City</label>
                 <div>
-                    <input type="text" class="form-control" id="lastName" placeholder="New York">
+                    <input type="text" class="form-control" id="lastName" placeholder="New York City">
                 </div>
             </div>
               <div class="col-md-12 form-group">
@@ -99,7 +116,7 @@
             </div>
             <div class="col-md-12 form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" name="submit" class="btn btn-default">Add</button>
+                    <button type="submit" name="add" class="btn btn-default ">Add</button>
                 </div>
             </div>
           </div>
